@@ -68,7 +68,7 @@ requestPermissions() => Promise<PermissionStatus>
 
 | Prop         | Type                                                                          |
 | ------------ | ----------------------------------------------------------------------------- |
-| **`status`** | <code><a href="#permissionstate">PermissionState</a> \| 'undetermined'</code> |
+| **`audio`** | <code><a href="#permissionstate">PermissionState</a> \| 'undetermined'</code> |
 
 
 ### Type Aliases
