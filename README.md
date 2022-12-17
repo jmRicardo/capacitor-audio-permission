@@ -1,6 +1,6 @@
 # capacitor-audio-permission
 
-Plugin para solicitar permiso de microfono en iOS ( posiblemente Android tambien ).
+Plugin sencillo para solicitar permiso de microfono en Android y iOS.
 
 ## Install
 
