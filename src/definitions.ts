@@ -1,7 +1,7 @@
 import type { PermissionState } from '@capacitor/core';
 
 export interface PermissionStatus {
-  status: PermissionState | 'undetermined';
+  audio: PermissionState | 'undetermined';
 }
 
 export interface AudioPermissionsPlugin {

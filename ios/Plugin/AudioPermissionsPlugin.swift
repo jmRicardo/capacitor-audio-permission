@@ -9,6 +9,7 @@ import AVFoundation
 @objc(AudioPermissionsPlugin)
 public class AudioPermissionsPlugin: CAPPlugin {
     private let implementation = AudioPermissions()
+    private let permission = "audio"
 
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
@@ -20,11 +21,11 @@ public class AudioPermissionsPlugin: CAPPlugin {
     @objc override public func requestPermissions(_ call: CAPPluginCall) {
         Task(priority: .background) {
                 guard await AVAudioSession.sharedInstance().hasPermissionToRecord() else {
-                    call.resolve(["status": "denied"])
+                    call.resolve([permission: "denied"])
                     return
                 }
         }
-        call.resolve(["status": "granted"])
+        call.resolve([permission: "granted"])
     }
     
     @objc override public func checkPermissions(_ call: CAPPluginCall) {
@@ -43,7 +44,7 @@ public class AudioPermissionsPlugin: CAPPlugin {
             recordState = "undetermined"
         }
         
-        call.resolve(["status": recordState])
+        call.resolve([permission: recordState])
     }
     
 
