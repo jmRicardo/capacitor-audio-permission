@@ -66,9 +66,9 @@ requestPermissions() => Promise<PermissionStatus>
 
 #### PermissionStatus
 
-| Prop         | Type                                                        |
-| ------------ | ----------------------------------------------------------- |
-| **`status`** | <code><a href="#permissionstate">PermissionState</a></code> |
+| Prop         | Type                                                                          |
+| ------------ | ----------------------------------------------------------------------------- |
+| **`status`** | <code><a href="#permissionstate">PermissionState</a> \| 'undetermined'</code> |
 
 
 ### Type Aliases
