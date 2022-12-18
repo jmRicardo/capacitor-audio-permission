@@ -8,6 +8,17 @@ Plugin sencillo para solicitar permiso de microfono en Android y iOS.
 npm install capacitor-audio-permission
 npx cap sync
 ```
+## Usage
+
+Aclaración:
+
+Para poder solicitar el permiso en Android es necesario agregar RECORD_AUDIO al manifest.xml:
+
+```
+
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+```
 
 ## API
 
