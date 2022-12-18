@@ -5,7 +5,6 @@ export interface PermissionStatus {
 }
 
 export interface AudioPermissionsPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
   checkPermissions(): Promise<PermissionStatus>;
   requestPermissions(): Promise<PermissionStatus>;
 }

@@ -23,9 +23,6 @@ npx cap sync
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
---------------------
-
-
 ### checkPermissions()
 
 ```typescript
@@ -53,8 +50,8 @@ requestPermissions() => Promise<PermissionStatus>
 
 #### PermissionStatus
 
-| Prop         | Type                                                                          |
-| ------------ | ----------------------------------------------------------------------------- |
+| Prop        | Type                                                                          |
+| ----------- | ----------------------------------------------------------------------------- |
 | **`audio`** | <code><a href="#permissionstate">PermissionState</a> \| 'undetermined'</code> |
 
 

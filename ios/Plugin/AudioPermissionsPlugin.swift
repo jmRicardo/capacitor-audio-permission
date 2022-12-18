@@ -11,13 +11,6 @@ public class AudioPermissionsPlugin: CAPPlugin {
     private let implementation = AudioPermissions()
     private let permission = "audio"
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
-    }
-
     @objc override public func requestPermissions(_ call: CAPPluginCall) {
         Task(priority: .background) {
                 guard await AVAudioSession.sharedInstance().hasPermissionToRecord() else {
