@@ -1,7 +1,7 @@
 {
   "name": "capacitor-audio-permission",
-  "version": "0.0.5",
-  "description": "Plugin para solicitar permiso de microfono en iOS ( posiblemente Android tambien ).",
+  "version": "0.0.6",
+  "description": "Plugin sencillo para solicitar permiso de microfono en Android y iOS.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
