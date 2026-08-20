@@ -20,6 +20,19 @@ Para poder solicitar el permiso en Android es necesario agregar RECORD_AUDIO al 
 
 ```
 
+## ProGuard / R8 (Android)
+
+Nothing to configure. The plugin ships its own `consumer-rules.pro`, so the keep
+rules it needs are merged into your app's R8 configuration automatically when
+you build with `minifyEnabled true`.
+
+They are deliberately narrow: only the Capacitor annotation types (which R8
+would otherwise drop, taking `PluginHandle.pluginAnnotation` with them and
+turning any `checkPermissions()` call into a fatal NPE) and the plugin's
+`@PluginMethod` entry points. Everything else in the plugin stays obfuscated,
+and you do not need the usual catch-all
+`-keep class * extends java.lang.annotation.Annotation` in your app.
+
 ## API
 
 <docgen-index>
